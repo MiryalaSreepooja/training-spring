@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Customer Service</title>
+</head>
+<body style="padding:200px">
+	<form action="register" method="post">
+		Email:
+		<input type="text" value="email">
+		<br><br>
+		Software:
+		<select name="software">
+			<option value="microsoft">microsoft</option>
+			<option value="sql">sql</option>
+			<option value="spring">spring</option>
+			<option value="server">server</option>
+		</select> <br><br>
+		 
+		os:
+		<select name="os">
+			<option value="Windows">Windows</option>
+			<option value="Linux">Linux</option>
+		</select> 
+		<br><br>
+		Problem Description: 
+		<input type="text" value="problem"><br><br><br>
+		<input type="submit" value="check">
+	</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Finding employee</title>
+</head>
+<body>
+	<h1>Customer Req Received</h1>
+	<div th:object="${customer}">
+
+		Email:
+		<div th:text="*{email}"></div>
+		First name:
+		<div th:text="*{fname}"></div>
+		LastName
+		<div th:text="*{lname}"></div>
+	</div>
+	<h2>Your request is as below</h2>
+	<div th:object="${requirement}">
+		Request id:
+		<div th:text="*{r_Id}"></div>
+		Software:
+		<div th:text="*{software}"></div>
+		OS
+		<div th:text="*{os}"></div>
+		Problem
+		<div th:text="*{problem}"></div>
+	</div>
+</body>
+</html>

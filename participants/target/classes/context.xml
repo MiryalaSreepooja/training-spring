@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean id="trainer" class="Trainer">
+<property name="name" value="Tiger"></property>
+<property name="Participants">
+<list>
+<ref bean="p1"></ref>
+<ref bean="p2"></ref>
+</list>
+</property>
+</bean>
+<bean id="p1" class="Participant">
+<property name="name" value="john"></property>
+<property name="LunchBox" ref="lb1"></property>
+</bean>
+<bean id="p2" class="Participant">
+<property name="name" value="johnny"></property>
+<property name="LunchBox" ref="lb2"></property>
+</bean>
+<bean id="lb1" class="LunchBox">
+<property name="itens">
+<set>
+<ref bean="item1"></ref>
+<ref bean="item2"></ref>
+</set>
+</property>
+</bean>
+<bean id="lb2" class="LunchBox">
+<property name="itens">
+<set>
+<ref bean="item1"></ref>
+<ref bean="item2"></ref>
+<ref bean="item3"></ref>
+</set>
+</property>
+</bean>
+
+<bean id="item1" class="participants.Item">
+<property name="taste" value="Good"></property>
+<property name="name" value="Dosa"></property>
+</bean>
+<bean id="item2" class="participants.Item">
+<property name="taste" value="Good"></property>
+<property name="name" value="roti"></property>
+</bean>
+<bean id="item3" class="participants.Item">
+<property name="taste" value="okay"></property>
+<property name="name" value="idly"></property>
+</bean>
+</beans>
